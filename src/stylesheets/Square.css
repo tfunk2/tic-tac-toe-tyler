@@ -1,0 +1,13 @@
+.square-div {
+    background-color: lightseagreen;
+    width: 200px;
+    height: 200px;
+    border: rgb(21, 112, 108) 10px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square-value-text {
+    font-size: 48pt;
+}

@@ -3,7 +3,7 @@ import '../stylesheets/Square.css'
 
 export default function Square(props){
     const handleClick = (i) => {
-        if(props.checkBoard(i) === false) {
+        if(props.checkBoard(i) === null) {
             if(props.isXTurn === false){
                 props.updateGame(i, "O")
             } else {
@@ -16,7 +16,9 @@ export default function Square(props){
         <div className="square-div" 
             onClick={() => handleClick(props.boxIndex)}
         >
-            {props.game[props.boxIndex]}
+            <span className="square-value-text">
+                {props.game[props.boxIndex] === null ? "*" : props.game[props.boxIndex]}
+            </span>
         </div>
     )
 }

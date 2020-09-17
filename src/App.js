@@ -1,15 +1,12 @@
 import React from 'react';
 import './App.css';
-import Game from './components/Board.js'
+import Game from './components/Game.js'
 
 function App() {
   return (
     <div className="app">
-      <Game checkBoard={} 
-        isXTurn={} 
-        updateGame={} 
-        game={}
-      />
+      <h1>Tic-Tac-Toe-Tyler</h1>
+      <Game />
     </div>
   );
 }

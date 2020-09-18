@@ -3,7 +3,7 @@ import '../stylesheets/Square.css'
 
 export default function Square(props){
     const handleClick = async (i) => {
-        if(props.checkBoard(i) === null) {
+        if(props.checkBoard(i)) {
             if(props.isXTurn === false){
                 await props.updateGame(i, "O")
             } else {

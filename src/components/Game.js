@@ -15,9 +15,9 @@ export default class Game extends Component {
 
     checkBoard = (i) => {
         if(this.state.game[i] !== null){
-            return true
+            return false
         }
-        return this.state.game[i]
+        return true
     }
 
     updateGame = (i, char) => {

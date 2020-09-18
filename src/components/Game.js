@@ -59,14 +59,20 @@ export default class Game extends Component {
     render() {
         return (
             <div className="game-div">
-                <div className={this.state.isXTurn ? "active-player" : "team-symbol"}>X</div>
+                <div className={this.state.isXTurn ? "active-player" : "team-symbol"}>
+                    <span>X</span>
+                    <span className="wins">{this.state.winner === "X" ? "Wins" : null}</span>
+                </div>
                 <Board checkBoard={this.checkBoard} 
                 isXTurn={this.state.isXTurn} 
                 updateGame={this.updateGame} 
                 game={this.state.game}
                 checkForWin={this.checkForWin}
                 />
-                <div className={this.state.isXTurn ? "team-symbol" : "active-player"}>O</div>
+                <div className={this.state.isXTurn ? "team-symbol" : "active-player"}>
+                    <span>O</span>
+                    <span className="wins">{this.state.winner === "O" ? "Wins" : null}</span>
+                </div>
             </div>
         )
     }

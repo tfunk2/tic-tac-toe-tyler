@@ -1,0 +1,23 @@
+.game-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.team-symbol, .active-player {
+    margin: 10px 80px;
+    font-size: 100px;
+    font-weight: 900;
+    padding: 5px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.active-player {
+    border: rgb(21, 112, 108) 20px solid;
+}
+
+.team-symbol {
+    border: transparent 20px solid;
+}

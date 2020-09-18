@@ -44,9 +44,13 @@ export default class Game extends Component {
                 checkCombo.every(entry => entry === "O")) {
 
                 if(checkCombo[0] === "X") {
-                    this.setState({ winner: "X" })
+                    if(this.state.winner !== "O"){
+                        this.setState({ winner: "X" })
+                    }
                 } else {
-                    this.setState({ winner: "O" })
+                    if(this.state.winner !== "X") {
+                        this.setState({ winner: "O" })
+                    }
                 }
             }
         }
@@ -55,12 +59,14 @@ export default class Game extends Component {
     render() {
         return (
             <div className="game-div">
+                <div className={this.state.isXTurn ? "active-player" : "team-symbol"}>X</div>
                 <Board checkBoard={this.checkBoard} 
                 isXTurn={this.state.isXTurn} 
                 updateGame={this.updateGame} 
                 game={this.state.game}
                 checkForWin={this.checkForWin}
                 />
+                <div className={this.state.isXTurn ? "team-symbol" : "active-player"}>O</div>
             </div>
         )
     }

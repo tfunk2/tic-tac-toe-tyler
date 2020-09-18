@@ -10,7 +10,7 @@ export default class Game extends Component {
             null, null, null
         ],     
         isXTurn: false,
-        winner: ""
+        winner: null
     }
 
     checkBoard = (i) => {
@@ -42,7 +42,7 @@ export default class Game extends Component {
 
             if(checkCombo.every(entry => entry === "X") || 
                 checkCombo.every(entry => entry === "O")) {
-                    
+
                 if(checkCombo[0] === "X") {
                     this.setState({ winner: "X" })
                 } else {

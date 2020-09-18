@@ -27,3 +27,22 @@
 .wins {
     font-size: 48px;
 }
+
+#reset-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    border-radius: 6px;
+    background-color: lightseagreen;
+    border: rgb(21, 112, 108) 4px solid;
+    cursor: pointer;
+}
+
+#reset-button:active {
+    background-color: rgb(26, 153, 147);
+}
+
+#reset-button:focus {
+    outline: none;
+}

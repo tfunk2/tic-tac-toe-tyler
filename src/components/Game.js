@@ -56,9 +56,22 @@ export default class Game extends Component {
         }
     }
 
+    handleReset = () => {
+        this.setState({ 
+            game: [
+                null, null, null,
+                null, null, null,
+                null, null, null
+            ],     
+            isXTurn: false,
+            winner: null
+        })
+    }
+
     render() {
         return (
             <div className="game-div">
+                <button onClick={this.handleReset} id="reset-button">RESET GAME</button>
                 <div className={this.state.isXTurn ? "active-player" : "team-symbol"}>
                     <span>X</span>
                     <span className="wins">{this.state.winner === "X" ? "Wins" : null}</span>

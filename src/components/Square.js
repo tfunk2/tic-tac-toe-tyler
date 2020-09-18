@@ -2,13 +2,14 @@ import React from 'react'
 import '../stylesheets/Square.css'
 
 export default function Square(props){
-    const handleClick = (i) => {
+    const handleClick = async (i) => {
         if(props.checkBoard(i) === null) {
             if(props.isXTurn === false){
-                props.updateGame(i, "O")
+                await props.updateGame(i, "O")
             } else {
-                props.updateGame(i, "X")
+                await props.updateGame(i, "X")
             }
+            props.checkForWin()
         }
     }
     

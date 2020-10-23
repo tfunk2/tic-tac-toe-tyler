@@ -46,3 +46,58 @@
 #reset-button:focus {
     outline: none;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .game-div {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0pt;
+    } 
+
+    .team-symbol, .active-player {
+        margin: 1vw;
+        font-size: 20vw;
+        font-weight: 900;
+        padding: 1vw;
+        min-width: 25vw;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .active-player {
+        border: rgb(21, 112, 108) 4vw solid;
+    }
+    
+    .team-symbol {
+        border: transparent 4vw solid;
+    }
+    
+    .wins {
+        font-size: 48px;
+        margin-left: 5vw;
+        width: auto;
+        position: absolute;
+        right: 8vw;
+        background-color: lightseagreen;
+        padding: 1vw;
+        border-radius: 4px;
+        color: rgb(21, 112, 108);
+    }
+
+    #reset-button {
+        position: initial;
+        font-size: 8vw;
+        border-radius: 6px;
+        background-color: lightseagreen;
+        border: rgb(21, 112, 108) 1vw solid;
+        margin-top: 1vw;
+    }
+
+    .team-div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+}

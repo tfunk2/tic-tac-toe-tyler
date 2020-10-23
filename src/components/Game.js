@@ -72,19 +72,24 @@ export default class Game extends Component {
         return (
             <div className="game-div">
                 <button onClick={this.handleReset} id="reset-button">RESET GAME</button>
-                <div className={this.state.isXTurn ? "active-player" : "team-symbol"}>
-                    <span>X</span>
-                    <span className="wins">{this.state.winner === "X" ? "Wins" : null}</span>
+                <div className="team-div">
+                    <div className={!this.state.isXTurn ? "team-symbol" : "active-player"}>
+                        <span>X</span>
+                    </div>
+                    <div className="wins">{this.state.winner === "X" ? "Wins" : null}</div>
                 </div>
                 <Board checkBoard={this.checkBoard} 
                 isXTurn={this.state.isXTurn} 
                 updateGame={this.updateGame} 
                 game={this.state.game}
                 checkForWin={this.checkForWin}
+                winner={this.state.winner}
                 />
-                <div className={this.state.isXTurn ? "team-symbol" : "active-player"}>
-                    <span>O</span>
-                    <span className="wins">{this.state.winner === "O" ? "Wins" : null}</span>
+                <div className="team-div">
+                    <div className={this.state.isXTurn ? "team-symbol" : "active-player"}>
+                        <span>O</span>
+                    </div>
+                    <div className="wins">{this.state.winner === "O" ? "Wins" : null}</div>
                 </div>
             </div>
         )

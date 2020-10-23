@@ -13,3 +13,21 @@
 .square-value-text {
     font-size: 80pt;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 425px) {
+    .square-div {
+        background-color: lightseagreen;
+        width: 23.5vw;
+        height: 23.5vw;
+        border: rgb(21, 112, 108) 10px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        justify-self: center;
+    }
+    
+    .square-value-text {
+        font-size: 20vw;
+    }
+}
